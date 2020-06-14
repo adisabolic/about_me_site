@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+        <link rel="icon" href="images/icons/logo.png">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,400,600,700" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Adisa Bolić</title>
+        
+    </head>
+    <body>
+
+        
+        <!-- NAVIGATION -->
+        <header>
+            <nav class="topnav" id="mytopnav">
+                <a class="btn active" href="#navhome">Home</a>
+                <a class="btn" href="#navproject">Project</a>
+                <a class="btn" href="#navblog">Blog</a>
+                <a class="btn" href="#navgallery">Gallery</a>
+                <a class="btn" href="#navcontact">Contact</a>
+                <a href="javascript:void(0);" class="icon" onclick="toggleNavButton()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </nav>
+        </header>
+
+
+        <!-- ABOUT -->
+
+        <section id="navhome">
+            <h1>About me</h1>
+            <div id="flexHome">
+                <div id="me">
+                    <img id="mePhoto" src='images/me.jpg'>
+                    <p>Hello, I'm <span id="name">Adisa Bolić</span>. <br>
+                    I am a theoretical computer science student the <a class="link" href='http://math.pmf.unsa.ba/en/index.html' target="_blank">Faculty of Science</a> (Mathematics department) in Sarajevo. I have a passion for mathematics and software engineering. Currently, I am working as a part-time machine learning developer at <a class="link" href='https://www.linkedin.com/company/pixlbrain' target="_blank"> PixlBrain</a>. You can get my CV <a class="link" href="files/CV_AdisaBolic.pdf">here</a>.
+                    </p>
+                </div>  
+
+                <div class="progress">
+                    <p>C++</p>
+                    <div class="container">
+                      <div class="skills cpp">95%</div>
+                    </div>
+                    <p>Java</p>
+                    <div class="container">
+                      <div class="skills java">75%</div>
+                    </div>
+                    <p>Python</p>
+                    <div class="container">
+                      <div class="skills py">90%</div>
+                    </div>
+                    <p>HTML</p>
+                    <div class="container">
+                      <div class="skills html">90%</div>
+                    </div>
+                    <p>CSS</p>
+                    <div class="container">
+                      <div class="skills css">80%</div>
+                    </div>
+                    <p>Javascript</p>
+                    <div class="container">
+                      <div class="skills js">80%</div>
+                    </div>
+                    <p>SQL</p>
+                    <div class="container">
+                      <div class="skills sql">85%</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section id="navproject">
+            <h1>Projects</h1>
+            <div id="flexProject">
+                <section class="project" id="project1">
+                    <a href="https://link.springer.com/chapter/10.1007%2F978-3-030-24986-1_1" target="_blank">
+                        <img class="projectBlogImg" src="images/blog&project/cube.png">
+                        <p class="infoProjectBlog">Toward Finite Models</p>
+                    </a>
+                    <p class="nameProjectBlog"> Toward finite models</p>
+                    <p class="aboutText">
+                        Construction of a finite model for the stages of the Taylor tower for embeddings of the 2-sphere in a smooth manifold. The stages are described as iterated homotopy limits of punctured cubes of embedding spaces where the source manifolds are homotopy equivalent to unions of disks.
+                    </p>
+                </section>
+                    
+                <section class="project" id="project2">
+                    <a href="files/polinom-dokumentacija.pdf" target="_blank">
+                        <img class="projectBlogImg" src="images/blog&project/polinom.png">
+                        <p class="infoProjectBlog">Polynomial class (C++)</p>
+                    </a>
+                    <p class="nameProjectBlog"> Implementation of a polynomial class</p>
+                    <p class="aboutText">
+                        The polynomial class has several useful methods (operations with polynomials, finding a zero of a polynomial, sorting, intersections of two polynomials...). You can download the soruce code and project documentation <a class="link" href="files/polinom.rar" target="_blank">here</a>.
+                    </p>
+                </section>
+            </div>
+        </section>
+
+        <!-- BLOGS -->
+
+        <section id="navblog">
+            <h1>Blogs</h1>
+            <div id="flexBlog">
+                <article class="blog" id="blog1">
+                    <div class="containerProjectBlog" id="openBlog1" onclick="openModal('myBlog1');">
+                        <img class="projectBlogImg" src="images/blog&project/androidvsios.jpg">
+                        <p class="infoProjectBlog">Android vs iOS</p>
+                    </div>
+                    <p class="nameProjectBlog"> Android vs iOS</p>
+                </article>
+                    
+                <article class="blog" id="blog2">
+                    <div class="containerProjectBlog" id="openBlog2" onclick="openModal('myBlog2');">
+                        <img class="projectBlogImg" src="images/blog&project/machine-learning.jpg">
+                        <p class="infoProjectBlog">Machine learning</p>
+                    </div>
+                    <p class="nameProjectBlog">Why has machine learning become so popular?</p>
+                </article>
+            </div>
+        
+
+            <div id="myBlog1" class="modalBlog">
+                <div class="modalContentBlog">
+                    <span id="close1" onclick="closeModal('myBlog1');">&times;</span>
+                    <h1> Android vs iOS </h1>
+                    <div class="insideBlogItemContainer">
+                        <img class="insideBlogItem" src="images/blog&project/machine.jpg" alt="android vs ios">
+                    </div>
+                    <h2>Intro</h2>
+                    <p> Although both operating systems are very similiar in the sense that they mostly provide the same functions - making calls, sending messages, taking photos and videos, there is a lot of debate around which is better. The choice is in most cases very subjective, based on the design and maybe popularity of some phone with the regarded operating system.</p>
+
+                    <h2>Basic differences</h2>
+                    <p>One plus for android based phones is that there are so many to choose from, while there are not so many options with the iOS system (mostly phones with a different following number - iPhone X, iPhone 5, ...). 
+                    Android phones are much more flexible, you can change the look of the phone home screen in many ways, apply various themes. That can be good or bad since it can slow the phone down significantly, which doesn't happen with iPhones, as they don't have so many customizing features.</p><br><br>
+
+                    <div class="insideBlogItemContainer">
+                        <table class="insideBlogItem">
+                            <caption>Benchmark</caption>
+                            <tr><th>Phone</th><th>Total</th><th>CPU</th><th>GPU</th><th>UX</th><th>MEM</th></tr>
+                            <tr><td>Apple iPhone Xs</td><td>364240</td><td>133179</td><td>152514</td><td>65984</td><td>12563</td></tr>
+                            <tr><td>Samsung Galaxy S9+</td><td>209616</td><td>67157</td><td>81153</td><td>54658</td><td>6648</td></tr>
+                        </table>
+                    </div>
+
+                    <h2>Apps</h2>
+                    <p>Although popular apps are mostly available on both platforms, in the recent time new apps generally first appear on the iOS store. Many google apps are available on the iOS as well, while in contrast only the Apple music app is available on the android system.</p>
+
+                    <h2>Conclusion</h2>
+                    <p>There is no real telling which phones are better, it is mostly a personal choice. There are good phone on both ends, so you can't really go wrong here. Personally, I like android based phones, just because I believe that iOS phones are very overpriced along with all their silly additional accessories, while on the other hand you can get the same build with an android phone with a far smaller budget.
+                    </p>
+                </div>
+            </div>
+
+            <div id="myBlog2" class="modalBlog">
+                <div class="modalContentBlog">
+                    <span id="close2" onclick="closeModal('myBlog2');">&times;</span>
+                    <h1> Why has machine learning become so popular? </h1>
+                    <div class="insideBlogItemContainer">
+                        <img class="insideBlogItem" src="images/blog&project/machine.jpg" alt="android vs ios">
+                    </div>
+                    <h2>Intro</h2>
+                    <p>Machine learning has been surely the topic of the century in the IT sector. Although it has been deeply researched even in the 90s, is hasn't been until today that machine learning has shown it's true power. That is mostly due to the developement of powerful computers and the rich data sources required to build models that solve problems in high-dimensional space.</p>
+
+                    <h2>History</h2>
+                    <p>To understand the present, we have to learn about the past. Machine learning is, in part, based on a model of brain cell interaction, which gave name to the term "neural network", very common in the topic of machine learning. That model was created by Donald Hebb ("The Organization of Behavior), which relies on the communication and excitement of neurons. There are many important projects that led to the developement of AI, for example:</p>
+
+                    <ol>
+                        <li>The Game of Checkers machine</li>
+                        <li>The Perceptron</li>
+                        <li>The nearest neighboor algorithm</li>
+                    </ol>
+
+                    <p>and many more. The discovery of using multilayer perceptron in the 1960s was a big step forward. </p>
+
+                    <h2>Today</h2>
+                    <p>Today machine learning can be seen everywhere, in sales forecasting, speech recognition, facial recognition, fraud detection, natural language processing... With the developement of computers in general, machine learning will only become more and more powerful. Modern machine learning models can be used to predict events ranging from disease outbreaks to the rise and fall of stocks.</p>
+
+                    <h2>Conclusion</h2>
+                    <p>Recently, Machine Learning was defined by Stanford University as “the science of getting computers to act without being explicitly programmed.” It is a very promising field for new IT student to delve into, keeping in mind that it is no easy task, if they plan on doing the big stuff. Surely machine learning will affect our lives in ways we can't imagine yet, and personally, I can't wait for that to happen.</p>
+
+                    <p>By the way, if you are interested in learning about machine learning and neural networks, the video lecture below is one of the best I have seen on this topic, if not the best.</p>
+
+                    <div class="insideBlogItemContainer">
+                        <video class="insideBlogItem" controls>
+                            <source src="files/neural-network-video.mp4" type="video/mp4">
+                            Neural network lecture
+                        </video>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- GALLERY -->
+
+        <!-- GALERY 1 -->
+        <section id="navgallery">
+            <h1>Gallery</h1>
+
+            <h2>Bosanski Petrovac - my hometown</h2>
+            <div class="galleryContainer">
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-1.jpg" onclick="openModal('galleryModal1');currentSlide('1',1)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-2.png" onclick="openModal('galleryModal1');currentSlide('1',2)" class="flexImg hover-shadow cursor">
+                </div>    
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-3.jpg" onclick="openModal('galleryModal1');currentSlide('1',3)" class="flexImg hover-shadow cursor">
+                </div>    
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-4.jpg" onclick="openModal('galleryModal1');currentSlide('1',4)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-5.jpg" onclick="openModal('galleryModal1');currentSlide('1',5)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-6.jpg" onclick="openModal('galleryModal1');currentSlide('1',6)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-7.jpg" onclick="openModal('galleryModal1');currentSlide('1',7)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-8.jpg" onclick="openModal('galleryModal1');currentSlide('1',8)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery1\bp-9.jpg" onclick="openModal('galleryModal1');currentSlide('1',9)" class="flexImg hover-shadow cursor">
+                </div>
+            </div>
+
+            <div id="galleryModal1" class="galleryModal">
+
+              <span class="close cursor" onclick="closeModal('galleryModal1')">&times;</span>
+
+              <div class="galleryModalContent">
+
+                    <div class="mySlides1">
+                        <div class="numbertext">1 / 9</div>
+                        <img src="images\gallery1\bp-1.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <div class="numbertext">2 / 9</div>
+                        <img src="images\gallery1\bp-2.png">
+                    </div>
+
+                    <div class="mySlides1">
+                        <div class="numbertext">3 / 9</div>
+                        <img src="images\gallery1\bp-3.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <div class="numbertext">4 / 9</div>
+                        <img src="images\gallery1\bp-4.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <div class="numbertext">5 / 9</div>
+                        <img src="images\gallery1\bp-5.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <div class="numbertext">6 / 9</div>
+                        <img src="images\gallery1\bp-6.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <div class="numbertext">7 / 9</div>
+                        <img src="images\gallery1\bp-7.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <div class="numbertext">8 / 9</div>
+                        <img src="images\gallery1\bp-8.jpg">
+                    </div>
+
+                    <div class="mySlides1">
+                        <div class="numbertext">9 / 9</div>
+                        <img src="images\gallery1\bp-9.jpg">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides('1',-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides('1',1)">&#10095;</a>
+
+                    <div class="caption-container">
+                      <p id="caption1"></p>
+                    </div>
+
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-1.jpg" onclick="currentSlide('1',1)" alt='Bosanski Petrovac - "Golo brdo"'>
+                    </div>
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-2.png" onclick="currentSlide('1',2)" alt="Bravsko polje">
+                    </div>
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-3.jpg" onclick="currentSlide('1',3)" alt='"Vrtače" near Bosanski Petrovac'>
+                    </div>
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-4.jpg" onclick="currentSlide('1',4)" alt="Town center">
+                    </div>
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-5.jpg" onclick="currentSlide('1',5)" alt="Tito's train on Oštrelj">
+                    </div>
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-6.jpg" onclick="currentSlide('1',6)" alt="Central park during winter">
+                    </div>
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-7.jpg" onclick="currentSlide('1',7)" alt="Winter in Bosanski Petrovac">
+                    </div>
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-8.jpg" onclick="currentSlide('1',8)" alt="The view on the town from Osječenica">
+                    </div>
+                    <div class="column">
+                        <img class="demo1 cursor" src="images\gallery1\bp-9.jpg" onclick="currentSlide('1',9)" alt="The view from the town towards Osječenica">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- GALERY 2 -->
+
+            <h2>Manči - my dog</h2>
+            <div class="galleryContainer">
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-1.jpg" onclick="openModal('galleryModal2');currentSlide('2',1)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-2.jpg" onclick="openModal('galleryModal2');currentSlide('2',2)" class="flexImg hover-shadow cursor">
+                </div>    
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-3.jpg" onclick="openModal('galleryModal2');currentSlide('2',3)" class="flexImg hover-shadow cursor">
+                </div>    
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-4.jpg" onclick="openModal('galleryModal2');currentSlide('2',4)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-5.jpg" onclick="openModal('galleryModal2');currentSlide('2',5)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-6.jpg" onclick="openModal('galleryModal2');currentSlide('2',6)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-7.jpg" onclick="openModal('galleryModal2');currentSlide('2',7)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-8.jpg" onclick="openModal('galleryModal2');currentSlide('2',8)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-9.jpg" onclick="openModal('galleryModal2');currentSlide('2',9)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-10.jpg" onclick="openModal('galleryModal2');currentSlide('2',10)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-11.jpg" onclick="openModal('galleryModal2');currentSlide('2',11)" class="flexImg hover-shadow cursor">
+                </div>
+                <div class="flexImgContainer">
+                    <img src="images\gallery2\manci-12.jpg" onclick="openModal('galleryModal2');currentSlide('2',12)" class="flexImg hover-shadow cursor">
+                </div>
+            </div>
+
+            <div id="galleryModal2" class="galleryModal">
+
+              <span class="close cursor" onclick="closeModal('galleryModal2')">&times;</span>
+
+              <div class="galleryModalContent">
+
+                    <div class="mySlides2">
+                        <div class="numbertext">1 / 12</div>
+                        <img src="images\gallery2\manci-1.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">2 / 12</div>
+                        <img src="images\gallery2\manci-2.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">3 / 12</div>
+                        <img src="images\gallery2\manci-3.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">4 / 12</div>
+                        <img src="images\gallery2\manci-4.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">5 / 12</div>
+                        <img src="images\gallery2\manci-5.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">6 / 12</div>
+                        <img src="images\gallery2\manci-6.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">7 / 12</div>
+                        <img src="images\gallery2\manci-7.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">8 / 12</div>
+                        <img src="images\gallery2\manci-8.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">9 / 12</div>
+                        <img src="images\gallery2\manci-9.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">10 / 12</div>
+                        <img src="images\gallery2\manci-10.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">11 / 12</div>
+                        <img src="images\gallery2\manci-11.jpg">
+                    </div>
+
+                    <div class="mySlides2">
+                        <div class="numbertext">12 / 12</div>
+                        <img src="images\gallery2\manci-12.jpg">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides('2',-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides('2',1)">&#10095;</a>
+
+                    <div class="caption-container">
+                      <p id="caption2"></p>
+                    </div>
+
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-1.jpg" onclick="currentSlide('2',1)" alt="Manči when he first arrived">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-2.jpg" onclick="currentSlide('2',2)" alt="After a few days">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-3.jpg" onclick="currentSlide('2',3)" alt="Manči is playing">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-4.jpg" onclick="currentSlide('2',4)" alt="He grew a little">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-5.jpg" onclick="currentSlide('2',5)" alt="And he grew a little more">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-6.jpg" onclick="currentSlide('2',6)" alt="He likes playing with a tennis ball">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-7.jpg" onclick="currentSlide('2',7)" alt="He also likes snow">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-8.jpg" onclick="currentSlide('2',8)" alt="He likes snow very much">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-9.jpg" onclick="currentSlide('2',9)" alt="He also likes the sun">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-10.jpg" onclick="currentSlide('2',10)" alt="Random photo">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-11.jpg" onclick="currentSlide('2',11)" alt="He likes running">
+                    </div>
+                    <div class="column">
+                        <img class="demo2 cursor" src="images\gallery2\manci-12.jpg" onclick="currentSlide('2',12)" alt="He is pretty fast">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+
+        <section id="navcontact">
+
+            <h1>Contact me</h1>
+            <form id="formContact">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="e-mail">E-mail</label>
+                <input type="text" id="e-mail" name="e-mail" placeholder="Your e-mail address..">
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+
+            <div id="contactBoxes">
+                <div class="contactBox">
+                    <a href="https://www.facebook.com/adisa.bolic" target="_blank">
+                        <img src="images/icons/facebook.svg" alt="facebook">
+                    </a>
+                </div>
+                <div class="contactBox">
+                    <a href="https://www.linkedin.com/in/adisa-bolić-926087173/" target="_blank">
+                        <img src="images/icons/linkedin.svg" alt="linkedin">
+                    </a>
+                </div>
+                <div class="contactBox">
+                    <a href="https://twitter.com/LinkinParkz98" target="_blank">
+                        <img src="images/icons/twitter.svg" alt="twitter">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <br>
+
+        <footer>
+            <small>All content copyright &copy; 2019, Adisa Bolić</small>
+        </footer>
+
+    </div>
+        <script type="text/javascript" src="javascript.js"></script>
+    </body>
+</html>
